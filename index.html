@@ -1,0 +1,1238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noora & Favas Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --ink: #1a211e;
+      --muted: #51625b;
+      --accent: #1f6f5c;
+      --accent-soft: #cfe6dd;
+      --paper: #f5f6f2;
+      --card: #ffffff;
+      --shadow: 0 24px 60px rgba(18, 26, 22, 0.16);
+      --gold: #c9a35c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Source Sans 3", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 20% 15%, #e6f3ec 0%, transparent 55%),
+        radial-gradient(circle at 80% 10%, #f8ecd4 0%, transparent 50%),
+        linear-gradient(120deg, #fbfbf7 0%, #eef4ef 100%);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 56px 20px 40px;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px 70px;
+    }
+
+    .hero {
+      background: linear-gradient(140deg, rgba(255, 255, 255, 0.96), rgba(248, 251, 248, 0.92)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80") center/cover;
+      border-radius: 30px;
+      padding: 60px 50px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    .hero::before {
+      background: #cfe6dd;
+      top: -90px;
+      right: -70px;
+    }
+
+    .hero::after {
+      background: #f1e4c8;
+      bottom: -100px;
+      left: -80px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .bismillah {
+      font-family: "Amiri", serif;
+      font-size: 24px;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .salam {
+      font-family: "Amiri", serif;
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .hero-photo {
+      width: min(320px, 70vw);
+      height: 320px;
+      border-radius: 24px;
+      object-fit: cover;
+      border: 6px solid #ffffff;
+      box-shadow: 0 18px 40px rgba(18, 26, 22, 0.18);
+      margin: 14px auto 18px;
+      display: block;
+    }
+
+    .names {
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(42px, 7vw, 72px);
+      color: var(--accent);
+      margin: 12px 0 10px;
+    }
+
+    .date {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 26px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      gap: 10px;
+      padding: 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid #e2ece6;
+      margin: 10px auto 0;
+    }
+
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .lang-toggle button.active {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 8px 16px rgba(31, 111, 92, 0.25);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 26px;
+      border-radius: 999px;
+      border: none;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 12px 20px rgba(31, 111, 92, 0.3);
+    }
+
+    .button.secondary {
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid #ead9d1;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .section {
+      margin-top: 52px;
+    }
+
+    .section.narrow {
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 720px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .detail-card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 14px 16px;
+      border: 1px solid #e2ece6;
+      box-shadow: 0 16px 30px rgba(18, 26, 22, 0.08);
+    }
+
+    .detail-card span {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .detail-card strong {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .details-hero {
+      background: var(--paper);
+      border-radius: 22px;
+      padding: 18px;
+      border: 1px solid #e2ece6;
+      box-shadow: 0 14px 30px rgba(18, 26, 22, 0.06);
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .countdown-card {
+      background: var(--card);
+      border-radius: 22px;
+      padding: 18px;
+      border: 1px solid #e2ece6;
+      box-shadow: 0 16px 30px rgba(18, 26, 22, 0.08);
+      text-align: center;
+    }
+
+    .countdown-card h3 {
+      margin: 0 0 12px;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      color: var(--ink);
+      letter-spacing: 0.08em;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(60px, 1fr));
+      gap: 10px;
+    }
+
+    .countdown-item {
+      background: var(--paper);
+      border-radius: 16px;
+      padding: 12px 8px;
+      border: 1px solid #e2ece6;
+    }
+
+    .countdown-item strong {
+      display: block;
+      font-size: 20px;
+      color: var(--accent);
+    }
+
+    .countdown-item span {
+      display: block;
+      margin-top: 4px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .details-hero .arabic {
+      font-family: "Amiri", serif;
+      font-size: 22px;
+      margin: 0 0 10px;
+      color: var(--ink);
+    }
+
+    .details-hero .label {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: block;
+      font-weight: 600;
+    }
+
+    .details-hero .date-line {
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      margin: 0 0 6px;
+    }
+
+    .details-hero .hijri-line {
+      font-family: "Amiri", serif;
+      font-size: 16px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .details-hero .event-line {
+      font-family: "Playfair Display", serif;
+      font-size: 16px;
+      margin: 6px 0 0;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+    }
+
+    .arabic-block {
+      font-family: "Amiri", serif;
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--ink);
+      background: var(--paper);
+      border-radius: 20px;
+      padding: 18px;
+      border: 1px solid #e2ece6;
+      box-shadow: 0 14px 30px rgba(18, 26, 22, 0.06);
+      text-align: center;
+    }
+
+    .arabic-block p {
+      margin: 8px 0;
+    }
+
+    .story {
+      background: var(--paper);
+      border-radius: 20px;
+      padding: 18px;
+      line-height: 1.7;
+      color: var(--muted);
+      border: 1px solid #e2ece6;
+      box-shadow: 0 14px 30px rgba(18, 26, 22, 0.06);
+    }
+
+    .profiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .profile-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f9fbf8 100%);
+      border-radius: 20px;
+      padding: 16px;
+      border: 1px solid #e2ece6;
+      box-shadow: 0 14px 26px rgba(18, 26, 22, 0.08);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      opacity: 0.9;
+    }
+
+    .profile-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 14px;
+      border: 1px solid #e2ece6;
+    }
+
+    .groom-photo {
+      object-position: center 0%;
+    }
+
+    .profile-card h3 {
+      margin: 0 0 6px;
+      font-family: "Playfair Display", serif;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+    }
+
+    .profile-card p strong {
+      display: inline-block;
+      font-size: 18px;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .profile-card p {
+      font-size: 14px;
+    }
+
+    .profile-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 14px 26px rgba(18, 26, 22, 0.16);
+    }
+
+    .map-card {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+    }
+
+    .venue-card {
+      width: min(520px, 100%);
+      background: var(--card);
+      border-radius: 22px;
+      padding: 22px 22px;
+      box-shadow: 0 18px 34px rgba(18, 26, 22, 0.1);
+      border: 1px solid #e2ece6;
+      text-align: center;
+    }
+
+    .venue-title {
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      margin: 0 0 8px;
+      color: var(--ink);
+    }
+
+    .venue-address {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 18px;
+      font-size: 15px;
+    }
+
+    .venue-divider {
+      width: 64px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      margin: 10px auto 18px;
+      border-radius: 999px;
+    }
+
+    .venue-panel {
+      background: var(--paper);
+      border-radius: 20px;
+      padding: 18px 16px;
+      border: 1px solid #e2ece6;
+    }
+
+    .qr-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 14px 14px 10px;
+      display: inline-block;
+      box-shadow: 0 14px 26px rgba(18, 26, 22, 0.12);
+    }
+
+    .qr-card img {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+    }
+
+    .qr-caption {
+      font-family: "Great Vibes", cursive;
+      font-size: 20px;
+      color: var(--accent);
+      margin-top: 8px;
+    }
+
+    .scan-text {
+      margin: 12px 0 18px;
+      font-size: 12px;
+      letter-spacing: 0.28em;
+      color: var(--muted);
+    }
+
+    .venue-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 26px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: var(--ink);
+      background: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 18px rgba(18, 26, 22, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .venue-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 24px rgba(18, 26, 22, 0.12);
+    }
+
+    .wishes {
+      background: var(--card);
+      border-radius: 22px;
+      padding: 20px;
+      border: 1px solid #e2ece6;
+      box-shadow: 0 20px 40px rgba(18, 26, 22, 0.1);
+      margin-top: 20px;
+    }
+
+    .wishes form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .wishes input,
+    .wishes textarea {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #ead9d1;
+      padding: 12px 14px;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    .wishes textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .wishes-wall {
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .wish-card {
+      background: var(--paper);
+      border-radius: 14px;
+      padding: 12px 14px;
+      border: 1px solid #e2ece6;
+      box-shadow: 0 10px 20px rgba(18, 26, 22, 0.06);
+    }
+
+    .wish-card strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1px solid #e2ece6;
+      background: #ffffff;
+      box-shadow: 0 16px 30px rgba(18, 26, 22, 0.08);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 320px;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .slide img.face-top {
+      object-position: center 20%;
+    }
+
+    .slide img.face-mid {
+      object-position: center 30%;
+    }
+
+    .slide img.full-fit {
+      object-fit: contain;
+      object-position: center;
+      background: #ffffff;
+    }
+
+
+    .slider-controls {
+      position: absolute;
+      inset: auto 16px 16px 16px;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+
+    .slider-btn {
+      pointer-events: all;
+      border: none;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--ink);
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 10px 18px rgba(18, 26, 22, 0.12);
+    }
+
+    .embed-map {
+      width: 100%;
+      height: 280px;
+      border: 0;
+      border-radius: 18px;
+      box-shadow: 0 14px 26px rgba(18, 26, 22, 0.1);
+    }
+
+    .thankyou-card {
+      background: var(--paper);
+      border-radius: 22px;
+      padding: 18px;
+      border: 1px solid #e2ece6;
+      box-shadow: 0 14px 30px rgba(18, 26, 22, 0.06);
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .thankyou-card h4 {
+      margin: 0 0 10px;
+      font-family: "Great Vibes", cursive;
+      font-size: 42px;
+      color: var(--accent);
+    }
+
+    .thankyou-card p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .thankyou-card .arabic-dua {
+      font-family: "Amiri", serif;
+      font-size: 18px;
+      margin-top: 10px;
+      color: var(--ink);
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .is-collapsed {
+      display: none;
+    }
+
+    .music-control {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #ffffff;
+      border-radius: 999px;
+      border: 1px solid #e2ece6;
+      padding: 10px 16px;
+      box-shadow: 0 12px 24px rgba(18, 26, 22, 0.12);
+      font-size: 13px;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      z-index: 20;
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        padding: 44px 26px;
+      }
+
+      .hero-photo {
+        height: 260px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .slide {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <section class="hero fade-in">
+      <div class="hero-content">
+        <div class="eyebrow" data-i18n="eyebrow">Wedding Invitation</div>
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</div>
+        <div class="salam">السلام عليكم ورحمة الله وبركاته</div>
+        <img class="hero-photo" src="WhatsApp Image 2026-03-26 at 11.56.29 PM.jpeg" alt="Noora and Favas" />
+        <div class="names">Noora &amp; Favas</div>
+        <div class="date">07-06-2026 | Sunday</div>
+        <p>
+          With joy, we invite you to celebrate the wedding of Noora &amp; Favas, praying that love, mercy, and
+          tranquility fill their life together. We warmly welcome both families and invite you to share in our
+          celebration.
+        </p>
+        <div class="button-row">
+          <button class="button secondary" type="button" id="detailsToggle" data-i18n="view_details">View Details</button>
+        </div>
+        <div class="lang-toggle" role="group" aria-label="Language toggle">
+          <button type="button" class="active" data-lang="en">English</button>
+          <button type="button" data-lang="ml">മലയാളം</button>
+          <button type="button" data-lang="ar">العربية</button>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="wrap is-collapsed" id="detailsContent" aria-hidden="true">
+    <section id="details" class="section narrow fade-in is-collapsed">
+      <div class="details-hero" aria-label="Wedding date highlight">
+        <p class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+        <br>
+        <span class="label">Nikkah Date</span>
+        <p class="date-line">06-06-2026 | Saturday</p>
+         <p class="hijri-line">28 Jumada al-Thani 1447</p>
+<br>
+        <span class="label">wedding function</span>
+        <p class="date-line">07-06-2026 | Sunday</p>
+        <div class="button-row" style="margin-top: 14px;">
+          <button class="button secondary" type="button" id="addToCalendar">Save to Calendar</button>
+        </div>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-card" style="text-align: center;">
+          <span>Calendar Highlight</span>
+          <svg viewBox="0 0 320 250" width="100%" height="220" role="img" aria-label="Wedding date highlighted on calendar">
+            <rect x="8" y="8" width="304" height="234" rx="18" fill="#ffffff" stroke="#e2ece6" stroke-width="2"></rect>
+            <rect x="8" y="8" width="304" height="46" rx="18" fill="#cfe6dd"></rect>
+            <text x="26" y="38" font-size="18" fill="#1d221f" font-family="Playfair Display, serif">June 2026</text>
+            <g fill="#5b6a61" font-size="12" font-family="Source Sans 3, sans-serif">
+              <text x="28" y="80">S</text><text x="68" y="80">M</text><text x="108" y="80">T</text>
+              <text x="148" y="80">W</text><text x="188" y="80">T</text><text x="228" y="80">F</text>
+              <text x="268" y="80">S</text>
+            </g>
+            <g fill="#1d221f" font-size="12" font-family="Source Sans 3, sans-serif">
+              <text x="68" y="112">1</text><text x="108" y="112">2</text><text x="148" y="112">3</text>
+              <text x="188" y="112">4</text><text x="228" y="112">5</text>
+              <text x="268" y="112" fill="#ffffff">6</text>
+              <text x="28" y="140" fill="#ffffff">7</text><text x="68" y="140">8</text><text x="108" y="140">9</text>
+              <text x="148" y="140">10</text><text x="188" y="140">11</text><text x="228" y="140">12</text>
+              <text x="268" y="140">13</text>
+              <text x="28" y="168">14</text><text x="68" y="168">15</text><text x="108" y="168">16</text>
+              <text x="148" y="168">17</text><text x="188" y="168">18</text><text x="228" y="168">19</text>
+              <text x="268" y="168">20</text>
+              <text x="28" y="196">21</text><text x="68" y="196">22</text><text x="108" y="196">23</text>
+              <text x="148" y="196">24</text><text x="188" y="196">25</text><text x="228" y="196">26</text>
+              <text x="268" y="196">27</text>
+              <text x="28" y="224">28</text><text x="68" y="224">29</text><text x="108" y="224">30</text>
+            </g>
+            <circle cx="268" cy="108" r="10" fill="#1f6f5c"></circle>
+            <circle cx="28" cy="136" r="10" fill="#1f6f5c"></circle>
+            <text x="264" y="112" font-size="12" fill="#ffffff" font-family="Source Sans 3, sans-serif">6</text>
+            <text x="24" y="140" font-size="12" fill="#ffffff" font-family="Source Sans 3, sans-serif">7</text>
+          </svg>
+          <p class="section-subtitle" style="margin-top: 10px;">
+            Dates Marked: 06-06-2026 | Saturday &amp; 07-06-2026 | Sunday
+          </p>
+        </div>
+      </div>
+      <div class="countdown-card" style="margin-top: 18px;">
+        <h3>Countdown</h3>
+        <div class="countdown-grid" id="countdown">
+          <div class="countdown-item">
+            <strong id="cd-days">0</strong>
+            <span>Days</span>
+          </div>
+          <div class="countdown-item">
+            <strong id="cd-hours">0</strong>
+            <span>Hours</span>
+          </div>
+          <div class="countdown-item">
+            <strong id="cd-mins">0</strong>
+            <span>Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <strong id="cd-secs">0</strong>
+            <span>Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-card">
+        <div class="venue-card">
+          <h3 class="venue-title" data-i18n="venue_title">Venue</h3>
+          <div class="venue-address">
+            Vista Convention Center<br />
+            Vengad
+          </div>
+          <div class="venue-divider" aria-hidden="true"></div>
+          <div class="venue-panel">
+            <div class="qr-card">
+              <img
+                src="vista-qrcode.png"
+                alt="QR code for venue location"
+              />
+              <div class="qr-caption">Location!</div>
+            </div>
+            <div class="scan-text" data-i18n="scan_for_location">SCAN FOR LOCATION</div>
+            <a
+              class="venue-button"
+              href="https://www.google.com/maps/search/?api=1&query=Vista%20Convention%20Center%20Vengad"
+              target="_blank"
+              rel="noreferrer"
+              data-i18n="open_maps"
+            >
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section narrow fade-in is-collapsed">
+      <div class="section-title" data-i18n="bride_groom_title">Groom &amp; Bride</div>
+      <div class="section-subtitle" data-i18n="bride_groom_subtitle">A few details about the couple.</div>
+      <div class="profiles">
+        <article class="profile-card">
+          <img class="groom-photo" src="groom.jpeg" alt="Groom portrait" />
+          <h3 data-i18n="groom_label">GROOM</h3>
+          <p><strong>FAVAS</strong><br />S/O Mr. Subair and Mrs. Bushra</p>
+        </article>
+        <article class="profile-card">
+          <img src="WhatsApp Image 2026-03-26 at 11.53.33 PM.jpeg" alt="Bride portrait" />
+          <h3 data-i18n="bride_label">BRIDE</h3>
+          <p><strong>NOORJAHAN</strong><br />D/O Mr. Yoosuf and Mrs. Raheena</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section narrow fade-in is-collapsed">
+      <div class="section-title" data-i18n="wishes_title">Send Your Wishes</div>
+      <div class="section-subtitle" data-i18n="wishes_subtitle">Share your duas, blessings, and messages for the couple 🤍🤍</div>
+      <div class="wishes">
+        <form id="wishesForm">
+          <input type="text" name="name" placeholder="Your Name" required data-i18n-placeholder="your_name" />
+          <textarea name="message" placeholder="Write your wishes..." data-i18n-placeholder="your_wishes"></textarea>
+          <button class="button primary" type="submit" data-i18n="send_wishes">Send Wishes</button>
+        </form>
+        <div class="wishes-wall" id="wishesWall" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section narrow fade-in is-collapsed">
+      <div class="section-title">Photo Highlights</div>
+      <div class="section-subtitle">Swipe through a few memorable moments.</div>
+      <div class="slider" aria-label="Photo slider">
+        <div class="slides" id="slides">
+          <div class="slide">
+            <img class="full-fit" src="engagement.jpg" alt="Engagement photo" />
+          </div>
+          <div class="slide">
+            <img src="groomfamily.JPG" alt="Groom family photo" />
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" type="button" id="prevSlide">Prev</button>
+          <button class="slider-btn" type="button" id="nextSlide">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section narrow fade-in is-collapsed">
+      <div class="thankyou-card">
+        <h4>Welcome</h4>
+        <p>
+          We warmly welcome both families and all our loved ones to share this joyful celebration with us.
+        </p>
+        <p class="arabic-dua">اللهم بارك لهما وبارك عليهما واجمع بينهما في خير</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap is-collapsed" id="footerBlock" aria-hidden="true" data-i18n="footer_note">
+    Thank you for your love and support. Please keep us in your duas.
+  </footer>
+
+  <button class="music-control" type="button" id="musicToggle" aria-label="Toggle background music">
+    <span>Music</span>
+    <strong id="musicState">Off</strong>
+  </button>
+
+  <audio id="bgMusic" loop>
+    <source src="WhatsApp Audio 2026-03-27 at 2.30.55 PM.mp4" type="audio/mp4" />
+    <source src="song.ogg" type="audio/ogg" />
+  </audio>
+
+  <script>
+    const detailsSection = document.getElementById("details");
+    const detailsContent = document.getElementById("detailsContent");
+    const footerBlock = document.getElementById("footerBlock");
+    const hiddenSections = document.querySelectorAll(".is-collapsed");
+    const detailsToggle = document.getElementById("detailsToggle");
+
+    detailsToggle.addEventListener("click", () => {
+      hiddenSections.forEach((section) => section.classList.remove("is-collapsed"));
+      detailsContent.setAttribute("aria-hidden", "false");
+      footerBlock.setAttribute("aria-hidden", "false");
+      detailsSection.scrollIntoView({ behavior: "smooth" });
+      if (music && music.paused) {
+        music.play().then(() => {
+          musicState.textContent = "On";
+        }).catch(() => {
+          musicState.textContent = "Tap";
+        });
+      }
+    });
+
+    const translations = {
+      en: {
+        eyebrow: "Wedding Invitation",
+        view_details: "View Details",
+        ayah_translation:
+          "“And among His signs is that He created for you spouses from among yourselves, that you may find tranquility in them; and He placed between you affection and mercy.”",
+        venue_title: "Venue",
+        scan_for_location: "SCAN FOR LOCATION",
+        open_maps: "Open in Google Maps",
+        bride_groom_title: "Groom & Bride",
+        bride_groom_subtitle: "A few details about the couple.",
+        bride_label: "BRIDE",
+        groom_label: "GROOM",
+        wishes_title: "Send Your Wishes",
+        wishes_subtitle: "Share your duas, blessings, and messages for the couple 🤍🤍",
+        your_name: "Your Name",
+        your_wishes: "Write your wishes...",
+        send_wishes: "Send Wishes",
+        footer_note: "Thank you for your love and support. Please keep us in your duas."
+      },
+      ml: {
+        eyebrow: "വിവാഹ ക്ഷണം",
+        view_details: "വിശദാംശങ്ങൾ കാണുക",
+        ayah_translation:
+          "“അവൻ നിങ്ങളിൽ നിന്നുതന്നെ നിങ്ങള്ക്കായി ജീവിതസഖികളെ സൃഷ്ടിച്ചതും നിങ്ങൾ അവരിൽ ആശ്രയം കണ്ടെത്തുവാനായിയും നിങ്ങള്ക്കിടയിൽ സ്‌നേഹവും കരുണയും സ്ഥാപിച്ചതും അവന്റെ അടയാളങ്ങളിൽ പെട്ടതാണ്.”",
+        venue_title: "വേദി",
+        scan_for_location: "ലൊക്കേഷൻ സ്കാൻ ചെയ്യുക",
+        open_maps: "ഗൂഗിൾ മാപ്പിൽ തുറക്കുക",
+        bride_groom_title: "വരനും വധുവും",
+        bride_groom_subtitle: "വധുവിന്റെയും വരന്റെയും കുറച്ച് വിവരങ്ങൾ.",
+        bride_label: "വധു",
+        groom_label: "വരൻ",
+        wishes_title: "ആശംസകൾ അയയ്‌ക്കുക",
+        wishes_subtitle: "ദുആകളും ആശംസകളും ദാമ്പത്യത്തിനായി പങ്കുവെയ്ക്കൂ 🤍🤍",
+        your_name: "നിങ്ങളുടെ പേര്",
+        your_wishes: "ആശംസകൾ എഴുതുക...",
+        send_wishes: "ആശംസകൾ അയയ്‌ക്കുക",
+        footer_note: "സ്നേഹത്തിനും പിന്തുണയ്ക്കും നന്ദി. ഞങ്ങളെ നിങ്ങളുടെ ദുആകളിൽ ഓർക്കണം."
+      },
+      ar: {
+        eyebrow: "دعوة زفاف",
+        view_details: "عرض التفاصيل",
+        ayah_translation:
+          "«ومن آياته أن خلق لكم من أنفسكم أزواجًا لتسكنوا إليها وجعل بينكم مودةً ورحمةً»",
+        venue_title: "المكان",
+        scan_for_location: "امسح لفتح الموقع",
+        open_maps: "افتح في خرائط جوجل",
+        bride_groom_title: "العريس والعروس",
+        bride_groom_subtitle: "بعض التفاصيل عن العروسين.",
+        bride_label: "العروس",
+        groom_label: "العريس",
+        wishes_title: "أرسل أمنياتك",
+        wishes_subtitle: "شارك دعواتك وبركاتك ورسائلك للعروسين 🤍🤍",
+        your_name: "اسمك",
+        your_wishes: "اكتب أمنياتك...",
+        send_wishes: "إرسال الأمنيات",
+        footer_note: "شكرًا لمحبتكم ودعمكم. تذكرونا في دعائكم."
+      }
+    };
+
+    const langButtons = document.querySelectorAll(".lang-toggle button");
+    const i18nTexts = document.querySelectorAll("[data-i18n]");
+    const i18nPlaceholders = document.querySelectorAll("[data-i18n-placeholder]");
+
+    const setLanguage = (lang) => {
+      const dict = translations[lang] || translations.en;
+      i18nTexts.forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+      i18nPlaceholders.forEach((el) => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (dict[key]) {
+          el.setAttribute("placeholder", dict[key]);
+        }
+      });
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+      langButtons.forEach((btn) => btn.classList.toggle("active", btn.dataset.lang === lang));
+    };
+
+    langButtons.forEach((btn) => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+    });
+
+    const music = document.getElementById("bgMusic");
+    const musicToggle = document.getElementById("musicToggle");
+    const musicState = document.getElementById("musicState");
+
+    musicToggle.addEventListener("click", async () => {
+      if (music.paused) {
+        try {
+          await music.play();
+          musicState.textContent = "On";
+        } catch (error) {
+          musicState.textContent = "Tap";
+        }
+      } else {
+        music.pause();
+        musicState.textContent = "Off";
+      }
+    });
+
+    const wishesForm = document.getElementById("wishesForm");
+    const wishesWall = document.getElementById("wishesWall");
+
+    wishesForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const formData = new FormData(wishesForm);
+      const name = (formData.get("name") || "").toString().trim();
+      const message = (formData.get("message") || "").toString().trim();
+      if (!name && !message) return;
+
+      const card = document.createElement("div");
+      card.className = "wish-card";
+      card.innerHTML = `
+        <strong>${name || "Guest"}</strong>
+        <span>${message || "Blessings and duas"}</span>
+      `;
+      wishesWall.prepend(card);
+      wishesForm.reset();
+    });
+
+    const slides = document.getElementById("slides");
+    const prevSlide = document.getElementById("prevSlide");
+    const nextSlide = document.getElementById("nextSlide");
+    let currentSlide = 0;
+
+    if (slides && prevSlide && nextSlide) {
+      const totalSlides = slides.children.length;
+      let autoSlideTimer;
+      const updateSlider = () => {
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+      };
+
+      const startAutoSlide = () => {
+        if (totalSlides < 2) return;
+        autoSlideTimer = setInterval(() => {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateSlider();
+        }, 4000);
+      };
+
+      const resetAutoSlide = () => {
+        if (autoSlideTimer) {
+          clearInterval(autoSlideTimer);
+        }
+        startAutoSlide();
+      };
+
+      prevSlide.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+        resetAutoSlide();
+      });
+
+      nextSlide.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+        resetAutoSlide();
+      });
+
+      startAutoSlide();
+    }
+
+    const addToCalendar = document.getElementById("addToCalendar");
+    if (addToCalendar) {
+      addToCalendar.addEventListener("click", () => {
+        const formatDate = (date) =>
+          date.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+
+        const dtStamp = formatDate(new Date());
+        const eventStart = "20260607";
+        const eventEnd = "20260608";
+
+        const icsContent = [
+          "BEGIN:VCALENDAR",
+          "VERSION:2.0",
+          "PRODID:-//Noora & Favas Invitation//EN",
+          "CALSCALE:GREGORIAN",
+          "BEGIN:VEVENT",
+          `DTSTAMP:${dtStamp}`,
+          "SUMMARY:Wedding Function - Noora & Favas",
+          "DTSTART;VALUE=DATE:" + eventStart,
+          "DTEND;VALUE=DATE:" + eventEnd,
+          "LOCATION:Vista Convention Center, Vengad",
+          "DESCRIPTION:Wedding Function",
+          "END:VEVENT",
+          "END:VCALENDAR"
+        ].join("\r\n");
+
+        const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "wedding-function.ics";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      });
+    }
+
+    // Fade-in on scroll
+    const sections = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    // Countdown timer
+    const weddingDate = new Date("2026-06-06T11:00:00");
+    const cdDays = document.getElementById("cd-days");
+    const cdHours = document.getElementById("cd-hours");
+    const cdMins = document.getElementById("cd-mins");
+    const cdSecs = document.getElementById("cd-secs");
+
+    const updateCountdown = () => {
+      if (!cdDays || !cdHours || !cdMins || !cdSecs) return;
+      const now = new Date();
+      let diff = weddingDate - now;
+      if (diff < 0) diff = 0;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      cdDays.textContent = days.toString();
+      cdHours.textContent = hours.toString().padStart(2, "0");
+      cdMins.textContent = mins.toString().padStart(2, "0");
+      cdSecs.textContent = secs.toString().padStart(2, "0");
+    };
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
