@@ -416,6 +416,7 @@
       border: 1px solid #e2ece6;
       user-select: none;
       -webkit-user-drag: none;
+      -webkit-touch-callout: none;
     }
 
     .groom-photo {
@@ -461,6 +462,7 @@
       box-shadow: 0 14px 26px rgba(18, 26, 22, 0.16);
       user-select: none;
       -webkit-user-drag: none;
+      -webkit-touch-callout: none;
     }
 
     .map-card {
@@ -632,6 +634,7 @@
       display: block;
       user-select: none;
       -webkit-user-drag: none;
+      -webkit-touch-callout: none;
     }
 
     .slide img.face-top {
@@ -1110,6 +1113,10 @@
       if (event.target && event.target.tagName === "IMG") {
         event.preventDefault();
       }
+    });
+
+    document.querySelectorAll("img").forEach((img) => {
+      img.setAttribute("draggable", "false");
     });
 
     wishesForm.addEventListener("submit", (event) => {
