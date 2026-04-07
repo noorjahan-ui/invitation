@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -414,6 +414,8 @@
       border-radius: 16px;
       margin-bottom: 14px;
       border: 1px solid #e2ece6;
+      user-select: none;
+      -webkit-user-drag: none;
     }
 
     .groom-photo {
@@ -457,6 +459,8 @@
       object-fit: cover;
       border-radius: 16px;
       box-shadow: 0 14px 26px rgba(18, 26, 22, 0.16);
+      user-select: none;
+      -webkit-user-drag: none;
     }
 
     .map-card {
@@ -626,6 +630,8 @@
       object-fit: cover;
       object-position: center;
       display: block;
+      user-select: none;
+      -webkit-user-drag: none;
     }
 
     .slide img.face-top {
@@ -768,10 +774,10 @@
         <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</div>
         <div class="salam">السلام عليكم ورحمة الله وبركاته</div>
         <img class="hero-photo" src="WhatsApp Image 2026-03-26 at 11.56.29 PM.jpeg" alt="Noora and Favas" />
-        <div class="names">Noora &amp; Favas</div>
+        <div class="names">Favas &amp; Noora</div>
         <div class="date">07-06-2026 | Sunday</div>
         <p>
-          With joy, we invite you to celebrate the wedding of Noora &amp; Favas, praying that love, mercy, and
+          With joy, we invite you to celebrate the wedding of Favas &amp;Noora, praying that love, mercy, and
           tranquility fill their life together. We warmly welcome both families and invite you to share in our
           celebration.
         </p>
@@ -794,7 +800,7 @@
         <br>
         <span class="label">Nikkah Date</span>
         <p class="date-line">06-06-2026 | Saturday</p>
-         <p class="hijri-line">28 Jumada al-Thani 1447</p>
+         <p class="hijri-line">18 Dhul Hijjah </p>
 <br>
         <span class="label">wedding function</span>
         <p class="date-line">07-06-2026 | Sunday</p>
@@ -818,7 +824,7 @@
             <g fill="#1d221f" font-size="12" font-family="Source Sans 3, sans-serif">
               <text x="68" y="112">1</text><text x="108" y="112">2</text><text x="148" y="112">3</text>
               <text x="188" y="112">4</text><text x="228" y="112">5</text>
-              <text x="268" y="112" fill="#ffffff">6</text>
+              <text x="268" y="112" >6</text>
               <text x="28" y="140" fill="#ffffff">7</text><text x="68" y="140">8</text><text x="108" y="140">9</text>
               <text x="148" y="140">10</text><text x="188" y="140">11</text><text x="228" y="140">12</text>
               <text x="268" y="140">13</text>
@@ -830,13 +836,11 @@
               <text x="268" y="196">27</text>
               <text x="28" y="224">28</text><text x="68" y="224">29</text><text x="108" y="224">30</text>
             </g>
-            <circle cx="268" cy="108" r="10" fill="#1f6f5c"></circle>
             <circle cx="28" cy="136" r="10" fill="#1f6f5c"></circle>
-            <text x="264" y="112" font-size="12" fill="#ffffff" font-family="Source Sans 3, sans-serif">6</text>
             <text x="24" y="140" font-size="12" fill="#ffffff" font-family="Source Sans 3, sans-serif">7</text>
           </svg>
           <p class="section-subtitle" style="margin-top: 10px;">
-            Dates Marked: 06-06-2026 | Saturday &amp; 07-06-2026 | Sunday
+            Dates Marked:   07-06-2026 | Sunday
           </p>
         </div>
       </div>
@@ -873,7 +877,7 @@
           <div class="venue-panel">
             <div class="qr-card">
               <img
-                src="vista-qrcode.png"
+                src="vista-qr.png"
                 alt="QR code for venue location"
               />
               <div class="qr-caption">Location!</div>
@@ -898,7 +902,7 @@
       <div class="section-subtitle" data-i18n="bride_groom_subtitle">A few details about the couple.</div>
       <div class="profiles">
         <article class="profile-card">
-          <img class="groom-photo" src="groom.jpeg" alt="Groom portrait" />
+          <img class="groom-photo" src="groom (2).jpeg" alt="Groom portrait" />
           <h3 data-i18n="groom_label">GROOM</h3>
           <p><strong>FAVAS</strong><br />S/O Mr. Subair and Mrs. Bushra</p>
         </article>
@@ -1094,6 +1098,19 @@
 
     const wishesForm = document.getElementById("wishesForm");
     const wishesWall = document.getElementById("wishesWall");
+
+    // Prevent image save via context menu or drag
+    document.addEventListener("contextmenu", (event) => {
+      if (event.target && event.target.tagName === "IMG") {
+        event.preventDefault();
+      }
+    });
+
+    document.addEventListener("dragstart", (event) => {
+      if (event.target && event.target.tagName === "IMG") {
+        event.preventDefault();
+      }
+    });
 
     wishesForm.addEventListener("submit", (event) => {
       event.preventDefault();
