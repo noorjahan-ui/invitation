@@ -558,55 +558,6 @@
       box-shadow: 0 14px 24px rgba(18, 26, 22, 0.12);
     }
 
-    .wishes {
-      background: var(--card);
-      border-radius: 22px;
-      padding: 20px;
-      border: 1px solid #e2ece6;
-      box-shadow: 0 20px 40px rgba(18, 26, 22, 0.1);
-      margin-top: 20px;
-    }
-
-    .wishes form {
-      display: grid;
-      gap: 14px;
-    }
-
-    .wishes input,
-    .wishes textarea {
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid #ead9d1;
-      padding: 12px 14px;
-      font-family: inherit;
-      font-size: 14px;
-    }
-
-    .wishes textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .wishes-wall {
-      margin-top: 18px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .wish-card {
-      background: var(--paper);
-      border-radius: 14px;
-      padding: 12px 14px;
-      border: 1px solid #e2ece6;
-      box-shadow: 0 10px 20px rgba(18, 26, 22, 0.06);
-    }
-
-    .wish-card strong {
-      display: block;
-      color: var(--ink);
-      margin-bottom: 4px;
-    }
-
     .slider {
       position: relative;
       overflow: hidden;
@@ -807,9 +758,6 @@
 <br>
         <span class="label">wedding function</span>
         <p class="date-line">07-06-2026 | Sunday</p>
-        <div class="button-row" style="margin-top: 14px;">
-          <button class="button secondary" type="button" id="addToCalendar">Save to Calendar</button>
-        </div>
       </div>
 
       <div class="details-grid">
@@ -845,6 +793,9 @@
           <p class="section-subtitle" style="margin-top: 10px;">
             Dates Marked:   07-06-2026 | Sunday
           </p>
+          <div class="button-row" style="margin-top: 12px;">
+            <button class="button secondary" type="button" id="addToCalendar">Save to Calendar</button>
+          </div>
         </div>
       </div>
       <div class="countdown-card" style="margin-top: 18px;">
@@ -907,26 +858,13 @@
         <article class="profile-card">
           <img class="groom-photo" src="groom (2).jpeg" alt="Groom portrait" />
           <h3 data-i18n="groom_label">GROOM</h3>
-          <p><strong>FAVAS</strong><br />S/O Mr. Subair and Mrs. Bushra</p>
+          <p><strong>FAVAS</strong><br />S/O Mr. Subair and Mrs. Bushra<br />Moorkkanad</p>
         </article>
         <article class="profile-card">
           <img src="WhatsApp Image 2026-03-26 at 11.53.33 PM.jpeg" alt="Bride portrait" />
           <h3 data-i18n="bride_label">BRIDE</h3>
-          <p><strong>NOORJAHAN</strong><br />D/O Mr. Yoosuf and Mrs. Raheena</p>
+          <p><strong>NOORJAHAN</strong><br />D/O Mr. Yoosuf and Mrs. Raheena<br />Thiruvegappura</p>
         </article>
-      </div>
-    </section>
-
-    <section class="section narrow fade-in is-collapsed">
-      <div class="section-title" data-i18n="wishes_title">Send Your Wishes</div>
-      <div class="section-subtitle" data-i18n="wishes_subtitle">Share your duas, blessings, and messages for the couple 🤍🤍</div>
-      <div class="wishes">
-        <form id="wishesForm">
-          <input type="text" name="name" placeholder="Your Name" required data-i18n-placeholder="your_name" />
-          <textarea name="message" placeholder="Write your wishes..." data-i18n-placeholder="your_wishes"></textarea>
-          <button class="button primary" type="submit" data-i18n="send_wishes">Send Wishes</button>
-        </form>
-        <div class="wishes-wall" id="wishesWall" aria-live="polite"></div>
       </div>
     </section>
 
@@ -1008,11 +946,6 @@
         bride_groom_subtitle: "A few details about the couple.",
         bride_label: "BRIDE",
         groom_label: "GROOM",
-        wishes_title: "Send Your Wishes",
-        wishes_subtitle: "Share your duas, blessings, and messages for the couple 🤍🤍",
-        your_name: "Your Name",
-        your_wishes: "Write your wishes...",
-        send_wishes: "Send Wishes",
         footer_note: "Thank you for your love and support. Please keep us in your duas."
       },
       ml: {
@@ -1027,11 +960,6 @@
         bride_groom_subtitle: "വധുവിന്റെയും വരന്റെയും കുറച്ച് വിവരങ്ങൾ.",
         bride_label: "വധു",
         groom_label: "വരൻ",
-        wishes_title: "ആശംസകൾ അയയ്‌ക്കുക",
-        wishes_subtitle: "ദുആകളും ആശംസകളും ദാമ്പത്യത്തിനായി പങ്കുവെയ്ക്കൂ 🤍🤍",
-        your_name: "നിങ്ങളുടെ പേര്",
-        your_wishes: "ആശംസകൾ എഴുതുക...",
-        send_wishes: "ആശംസകൾ അയയ്‌ക്കുക",
         footer_note: "സ്നേഹത്തിനും പിന്തുണയ്ക്കും നന്ദി. ഞങ്ങളെ നിങ്ങളുടെ ദുആകളിൽ ഓർക്കണം."
       },
       ar: {
@@ -1046,11 +974,6 @@
         bride_groom_subtitle: "بعض التفاصيل عن العروسين.",
         bride_label: "العروس",
         groom_label: "العريس",
-        wishes_title: "أرسل أمنياتك",
-        wishes_subtitle: "شارك دعواتك وبركاتك ورسائلك للعروسين 🤍🤍",
-        your_name: "اسمك",
-        your_wishes: "اكتب أمنياتك...",
-        send_wishes: "إرسال الأمنيات",
         footer_note: "شكرًا لمحبتكم ودعمكم. تذكرونا في دعائكم."
       }
     };
@@ -1099,9 +1022,6 @@
       }
     });
 
-    const wishesForm = document.getElementById("wishesForm");
-    const wishesWall = document.getElementById("wishesWall");
-
     // Prevent image save via context menu or drag
     document.addEventListener("contextmenu", (event) => {
       if (event.target && event.target.tagName === "IMG") {
@@ -1117,23 +1037,6 @@
 
     document.querySelectorAll("img").forEach((img) => {
       img.setAttribute("draggable", "false");
-    });
-
-    wishesForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const formData = new FormData(wishesForm);
-      const name = (formData.get("name") || "").toString().trim();
-      const message = (formData.get("message") || "").toString().trim();
-      if (!name && !message) return;
-
-      const card = document.createElement("div");
-      card.className = "wish-card";
-      card.innerHTML = `
-        <strong>${name || "Guest"}</strong>
-        <span>${message || "Blessings and duas"}</span>
-      `;
-      wishesWall.prepend(card);
-      wishesForm.reset();
     });
 
     const slides = document.getElementById("slides");
